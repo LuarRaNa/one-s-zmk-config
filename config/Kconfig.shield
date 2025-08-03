@@ -1,0 +1,18 @@
+config SHIELD_ERGONAUT_ONE_S
+    bool
+
+config SHIELD_ERGONAUT_ONE_S_DONGLE
+    def_bool $(shields_list_contains,ergonaut_one_s_dongle)
+    select ZMK_SPLIT_ROLE_CENTRAL
+    select ZMK_SPLIT
+    select SHIELD_ERGONAUT_ONE_S
+
+config SHIELD_ERGONAUT_ONE_S_LEFT
+    def_bool $(shields_list_contains,ergonaut_one_s_left)
+    select ZMK_SPLIT
+    select SHIELD_ERGONAUT_ONE_S
+
+config SHIELD_ERGONAUT_ONE_S_RIGHT
+    def_bool $(shields_list_contains,ergonaut_one_s_right)
+    select ZMK_SPLIT
+    select SHIELD_ERGONAUT_ONE_S
